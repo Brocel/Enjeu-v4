@@ -16,7 +16,8 @@ import { NgxBootstrapModule } from './modules/ngx-bootstrap.module';
   exports: [
     CommonModule, //préparation de la factorisation du CommonModule
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxBootstrapModule
   ]
 })
 export class SharedModule { }
