@@ -1,6 +1,6 @@
 export class Personnage {
   roles: Array<'JOUEUR'|'MOB'>;
-  id: string;
+  readonly id: string;
   description: Description;
   statistics: Statistics;
 
