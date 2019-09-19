@@ -23,46 +23,38 @@ export class Personnage {
     this.roles = roles || ['JOUEUR'];
     this.description = new Description(name, gender, race, mood, job, avatar, story);
     this.statistics = new Statistics(taille, mass, age);
-    //getters
-    getName() {
-      return this.description.name;
-    }
-    getGender() {
-      return this.description.gender;
-    }
-    getRace() {
-      return this.description.race;
-    }
-    getMood() {
-      return this.description.mood;
-    }
-    getJob() {
-      return this.description.job;
-    }
-    getAvatar() {
-      return this.description.avatar;
-    }
-    getStory() {
-      return this.description.story;
-    }
-    getTitle() {
-      return this.description.title;
-    }
-    getLevel() {
-      return this.description.level;
-    }
-    // Méthodes
-    fullDescription() {
-      pName = getName();
-      pGender = getGender();
-      pRace = getRace();
-      pMood = getMood();
-      pJob = getJob();
-      pStory = getStory();
-      pTitle = getTitle();
-      pLevel = getLevel();
-      return console.log("Bonjour ! Je m'appelle " + pName + ", " + pJob + " " + pGender + " " + pTitle + " de niveau " + pLevel + ". En général, je suis d'humeur " + pMood + ". Les amis, voici mon histoire : " + pStory );
-    }
+  }
+  //getters
+  getName() {
+    return this.description.name;
+  }
+  getGender() {
+    return this.description.gender;
+  }
+  getRace() {
+    return this.description.race;
+  }
+  getMood() {
+    return this.description.mood;
+  }
+  getJob() {
+    return this.description.job;
+  }
+  getAvatar() {
+    return this.description.avatar;
+  }
+  getStory() {
+    return this.description.story;
+  }
+  getTitle() {
+    return this.description.title;
+  }
+  getLevel() {
+    return this.description.level;
+  }
+  // Méthodes
+  fullDescription() {
+    return console.log("Bonjour ! Je m'appelle " + this.getName + ", " + this.getRace + " " + this.getJob + " " + this.getGender + " " + this.getTitle + " de niveau " + this.getLevel + ". En général, je suis d'humeur " + this.getMood + ". Les amis, voici mon histoire : " + this.getStory );
   }
 }
 
