@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 import { ProtectedRoutingModule } from './protected-routing.module';
 import { TableJeuModule } from './table-jeu/table-jeu.module';
@@ -8,7 +8,7 @@ import { TableJeuModule } from './table-jeu/table-jeu.module';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    SharedModule,
     ProtectedRoutingModule,
     TableJeuModule
   ]

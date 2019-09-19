@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { TableJeuComponent } from './table-jeu/table-jeu.component';
 
 
@@ -7,7 +7,7 @@ import { TableJeuComponent } from './table-jeu/table-jeu.component';
 @NgModule({
   declarations: [TableJeuComponent],
   imports: [
-    CommonModule
+    SharedModule
   ]
 })
 export class TableJeuModule { }
