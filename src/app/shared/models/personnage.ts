@@ -1,8 +1,13 @@
 export class Personnage {
   roles: Array<'JOUEUR'|'MOB'>;
-  readonly id: string;
+  id: string;
   description: Description;
   statistics: Statistics;
+
+  //getters
+  get theId() {
+    return this.id;
+  }
 
   constructor(
     roles: Array<'JOUEUR'|'MOB'>,
@@ -26,49 +31,46 @@ export class Personnage {
     //mettre un return descrition et statistics ?
   }
   // Méthodes
-  fullDescription() {
-    return console.log("Bonjour ! Je m'appelle " + this.description.name + ", " + this.description.race + " " + this.description.job + " " + this.description.gender + " " + this.description.title + " de niveau " + this.description.level + ". En général, je suis d'humeur " + this.description.mood + ". Les amis, voici mon histoire : " + this.description.story );
-  }
 }
 
 class Description {
-  _name: string;
-  _gender: string;
-  _race: string;
-  _mood: string; //role play
-  _job: string; //classe metier à coder
-  _title: string; //titre "honorifique"
-  _avatar: string; //url de l'image
-  _level: number; // réfléchir au fonctionnement de l'xp
-  _story: string; // histoire, description (RP)
+  name: string;
+  gender: string;
+  race: string;
+  mood: string; //role play
+  job: string; //classe metier à coder
+  title: string; //titre "honorifique"
+  avatar: string; //url de l'image
+  level: number; // réfléchir au fonctionnement de l'xp
+  story: string; // histoire, description (RP)
 
   //getters
-  get name() {
-    return this._name;
+  get theName() {
+    return this.name;
   }
-  get gender() {
-    return this._gender;
+  get theGender() {
+    return this.gender;
   }
-  get race() {
-    return this._race;
+  get theRace() {
+    return this.race;
   }
-  get mood() {
-    return this._mood;
+  get theMood() {
+    return this.mood;
   }
-  get job() {
-    return this._job;
+  get theJob() {
+    return this.job;
   }
-  get avatar() {
-    return this._avatar;
+  get theAvatar() {
+    return this.avatar;
   }
-  get story() {
-    return this._story;
+  get theStory() {
+    return this.story;
   }
-  get title() {
-    return this._title;
+  get theTitle() {
+    return this.title;
   }
-  get level() {
-    return this._level;
+  get theLevel() {
+    return this.level;
   }
 
   constructor(
@@ -81,25 +83,29 @@ class Description {
     story: string
   )
   {
-    this._name = name;
-    this._gender = gender;
-    this._race = race;
-    this._mood = mood;
-    this._job = job;
-    this._avatar = avatar;
-    this._story = story;
-    this._title = 'Débutant';
-    this._level = 0;
+    this.name = name;
+    this.gender = gender;
+    this.race = race;
+    this.mood = mood;
+    this.job = job;
+    this.avatar = avatar;
+    this.story = story;
+    this.title = 'Débutant';
+    this.level = 0;
+  }
+  // Méthodes
+  fullDescription() {
+    return console.log("Bonjour ! Je m'appelle " + this.theName + ", " + this.theRace + " " + this.theJob + " " + this.theGender + " " + this.theTitle + " de niveau " + this.theLevel + ". En général, je suis d'humeur " + this.theMood + ". Les amis, voici mon histoire : " + this.theStory );
   }
 }
 
 class Statistics {
-  _taille: number; // en m
-  _mass: number; // en kg
-  _age: number; // en années
-  _for: number; // force physique
-  _def: number; // résistance physique et endurance
-  _int: number; // force mentale et charisme
+  taille: number; // en m
+  mass: number; // en kg
+  age: number; // en années
+  for: number; // force physique
+  def: number; // résistance physique et endurance
+  int: number; // force mentale et charisme
 
   constructor(
     taille: number,
@@ -107,11 +113,11 @@ class Statistics {
     age: number
   )
   {
-    this._taille = taille;
-    this._mass = mass;
-    this._age = age;
-    this._for = 10;
-    this._def = 10;
-    this._int = 10;
+    this.taille = taille;
+    this.mass = mass;
+    this.age = age;
+    this.for = 10;
+    this.def = 10;
+    this.int = 10;
   }
 }
