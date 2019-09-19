@@ -3,6 +3,28 @@ export class Personnage {
   readonly id: string;
   description: Description;
   statistics: Statistics;
+
+  constructor(
+    roles: Array<'JOUEUR'|'MOB'>,
+    //description
+    name: string,
+    gender: string,
+    race: string,
+    mood: string,
+    job: string,
+    avatar: string,
+    story: string,
+    //statistics
+    taille: number,
+    mass: number,
+    age: number
+  )
+  {
+    this.roles = roles || ['JOUEUR'];
+    this.description = new Description(name, gender, race, mood, job, avatar, story);
+    this.statistics = new Statistics(taille, mass, age);
+    
+  }
 }
 
 class Description {
