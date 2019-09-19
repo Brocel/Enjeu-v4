@@ -23,6 +23,7 @@ export class Personnage {
     this.roles = roles || ['JOUEUR'];
     this.description = new Description(name, gender, race, mood, job, avatar, story);
     this.statistics = new Statistics(taille, mass, age);
+    //mettre un return descrition et statistics ?
   }
   //getters
   getName() {
