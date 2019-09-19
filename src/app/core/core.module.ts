@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
+import { HttpClientModule } from  '@angular/common/http';
 
 
 
@@ -10,7 +11,12 @@ import { ProtectedModule } from '../protected/protected.module';
   imports: [
     CommonModule,
     PublicModule,
-    ProtectedModule
+    ProtectedModule,
+    HttpClientModule
+  ],
+  exports: [
+    CommonModule,
+    HttpClientModule
   ]
 })
 export class CoreModule { }
