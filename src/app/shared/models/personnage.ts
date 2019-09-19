@@ -1,9 +1,11 @@
 export class Personnage {
-  roles: Array<'MDJ'|'JOUEUR'|'MOB'>;
+  roles: Array<'JOUEUR'|'MOB'>;
   readonly id: string;
+  description: Description;
+  statistics: Statistics;
 }
 
-class Presentation {
+class Description {
   name: string;
   gender: string;
   race: string;
@@ -33,5 +35,28 @@ class Presentation {
     this.story = story;
     this.title = 'Débutant';
     this.level = 0;
+  }
+}
+
+class Statistics {
+  taille: number; // en m
+  mass: number; // en kg
+  age: number; // en années
+  for: number; // force physique
+  def: number; // résistance physique et endurance
+  int: number; // force mentale et charisme
+
+  constructor(
+    taille: number,
+    mass: number,
+    age: number
+  )
+  {
+    this.taille = taille;
+    this.mass = mass;
+    this.age = age;
+    this.for = 10;
+    this.def = 10;
+    this.int = 10;
   }
 }
