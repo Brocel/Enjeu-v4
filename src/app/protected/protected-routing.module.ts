@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TableJeuComponent } from './table-jeu/table-jeu.component';
+import { TableJeuComponent } from './table-jeu/table-jeu/table-jeu.component';
 
 
 const routes: Routes = [
