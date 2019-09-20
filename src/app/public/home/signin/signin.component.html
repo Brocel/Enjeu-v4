@@ -1,1 +1,25 @@
-<p>signin works!</p>
+<div class="row text-center justify-content-center authBackGround">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Rejoindre la Table de jeu</h2>
+    <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text"
+               id="email"
+               class="form-control"
+               formControlName="email"
+               placeholder="Adresse mail">
+      </div>
+      <div class="form-group">
+        <input type="password"
+               id="password"
+               class="form-control"
+               formControlName="password"
+               placeholder="Mot de passe">
+      </div>
+      <button class="btn btn-primary"
+              type="submit"
+              [disabled]="signInForm.invalid">Se connecter</button>
+    </form>
+    <p class="text-danger">{{ errorMessage }}</p>
+  </div>
+</div>
