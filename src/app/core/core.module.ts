@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from  '@angular/common/http';
+
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
-import { HttpClientModule } from  '@angular/common/http';
 
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
@@ -26,4 +27,11 @@ import { AuthGuardService } from './services/auth-guard.service';
     AuthGuardService
   ]
 })
-export class CoreModule {}
+export class CoreModule {
+  //Importer le core uniquement dans app.module
+  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+   if (parentModule) {
+    throw new Error('CoreModule is already loaded.');
+   }
+  }
+}
