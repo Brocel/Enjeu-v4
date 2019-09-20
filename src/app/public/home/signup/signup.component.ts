@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-signup',
+  selector: 'enjeu-home-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
