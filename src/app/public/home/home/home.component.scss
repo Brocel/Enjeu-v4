@@ -6,3 +6,24 @@
   background-position: center;
   background-size: 100% 100%;
 }
+/*Grille*/
+.grilleHome {
+  display: grid;
+  align-items: center;
+  padding: 1%;
+  grid-gap: 1%;
+  grid-template-columns: repeat(2,0.5fr) ;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+  "ban ban"
+  "feat1 feat2";
+}
+.ban {
+  grid-area: ban;
+}
+.feat1 {
+  grid-area: feat1;
+}
+.feat2 {
+  grid-area: feat2;
+}
