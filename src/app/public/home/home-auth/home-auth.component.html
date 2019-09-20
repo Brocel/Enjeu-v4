@@ -1,1 +1,5 @@
-<p>home-auth works!</p>
+<div class="container">
+  <div class="row">
+    <enjeu-home-auth-card *ngFor="let feature of features" class="col-md-4" [action]="feature.action" [title]="feature.title" [signForm]="feature.signForm" [invalid]="feature.invalid"></enjeu-home-auth-card>
+  </div>
+</div>

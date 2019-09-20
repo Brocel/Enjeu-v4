@@ -7,10 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeAuthCardComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() icon: string;
-  @Input() description: string;
   @Input() action: string;
+  @Input() title: string;
+  @Input() signForm: string;
+  @Input() invalid: string;
 
   constructor() { }
 
