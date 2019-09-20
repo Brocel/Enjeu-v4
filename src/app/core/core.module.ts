@@ -6,6 +6,8 @@ import { HttpClientModule } from  '@angular/common/http';
 
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
+//import * as firebase from 'firebase';
+
 
 @NgModule({
   declarations: [],
@@ -24,4 +26,4 @@ import { AuthGuardService } from './services/auth-guard.service';
     AuthGuardService
   ]
 })
-export class CoreModule { }
+export class CoreModule {}
