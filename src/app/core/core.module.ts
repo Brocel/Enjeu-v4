@@ -7,10 +7,12 @@ import { ProtectedModule } from '../protected/protected.module';
 
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [NavbarComponent, FooterComponent],
   imports: [
     CommonModule,
     PublicModule,
@@ -19,7 +21,9 @@ import { AuthGuardService } from './services/auth-guard.service';
   ],
   exports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    NavbarComponent,
+    FooterComponent
   ],
   providers: [
     AuthService,
