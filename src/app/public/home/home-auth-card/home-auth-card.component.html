@@ -1,1 +1,30 @@
-<p>home-auth-card works!</p>
+<!-- Carte de fonctionnalité -->
+<div class="card mb-3 authBackGround">
+  <h3 class="card-header" title="{{action}}">{{ title }}</h3>
+  <div id="contenu" class="card-body">
+    <form [formGroup]="{{signForm}}" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text"
+               id="email"
+               class="form-control"
+               formControlName="email"
+               placeholder="Adresse mail">
+      </div>
+      <div class="form-group">
+        <input type="password"
+               id="password"
+               class="form-control"
+               formControlName="password"
+               placeholder="Mot de passe">
+      </div>
+      <button class="btn btn-primary"
+              type="submit"
+              [disabled]="{{invalid}}">Se connecter</button>
+    </form>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item text-center text-danger">
+    {{ errorMessage }}
+    </li>
+  </ul>
+</div>
