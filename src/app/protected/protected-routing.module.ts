@@ -4,7 +4,7 @@ import { TableJeuComponent } from './table-jeu/table-jeu/table-jeu.component';
 
 
 const routes: Routes = [
-  { path: '/protected/table-jeu', component: TableJeuComponent }, // on fait correspondre la route tablejeu au composant table-jeu
+  { path: 'protected/table-jeu', component: TableJeuComponent }, // on fait correspondre la route tablejeu au composant table-jeu
 ];
 
 @NgModule({
