@@ -7,7 +7,6 @@ import { ProtectedModule } from '../protected/protected.module';
 
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
-//import * as firebase from 'firebase';
 
 
 @NgModule({
