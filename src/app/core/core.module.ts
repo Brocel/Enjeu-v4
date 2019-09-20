@@ -4,7 +4,8 @@ import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
 import { HttpClientModule } from  '@angular/common/http';
 
-
+import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,10 @@ import { HttpClientModule } from  '@angular/common/http';
   exports: [
     CommonModule,
     HttpClientModule
+  ],
+  providers: [
+    AuthService,
+    AuthGuardService
   ]
 })
 export class CoreModule { }
