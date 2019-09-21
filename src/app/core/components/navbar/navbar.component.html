@@ -4,6 +4,9 @@
       <li>
         <a *ngIf="!isAuth">Home</a>
       </li>
+      <li>
+        <a *ngIf="isAuth" routerLink="protected/table-jeu">Table de jeu</a>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
