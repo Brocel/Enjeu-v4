@@ -6,3 +6,37 @@
   background-position: center;
   background-size: 100% 100%;
 }
+/*Grille*/
+.grilleTableJeu {
+  display: grid;
+  align-items: center;
+  padding: 1%;
+  grid-gap: 1%;
+  grid-template-columns: repeat(4,0.5fr) ;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-areas:
+  "feat1 feat1 feat2 feat2"
+  "feat3 chat chat feat4"
+  "feat5 feat5 feat6 feat6";
+}
+.chat {
+  grid-area: chat;
+}
+.feat1 {
+  grid-area: feat1;
+}
+.feat2 {
+  grid-area: feat2;
+}
+.feat3 {
+  grid-area: feat3;
+}
+.feat4 {
+  grid-area: feat4;
+}
+.feat5 {
+  grid-area: feat5;
+}
+.feat6 {
+  grid-area: feat6;
+}
