@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { CanActivate } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
