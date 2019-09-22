@@ -30,11 +30,11 @@ export class Statistics {
 
   constructor() {
     //todo taille en fction de Race
-    this.taille = Math.random() * (maxTaille - minTaille) + minTaille;
+    // this.taille = Math.random() * (maxTaille - minTaille) + minTaille;
     //todo mass en fction de Taille
-    this.mass = this.taille  * mulMass * 100 / 3;
+    // this.mass = this.taille  * mulMass * 100 / 3;
     //todo age en fonction de Race
-    this.age = Math.random() * (maxAge - minAge) + minAge;
+    // this.age = Math.random() * (maxAge - minAge) + minAge;
     this.for = 10;
     this.def = 10;
     this.int = 10;
