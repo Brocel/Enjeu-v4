@@ -1,5 +1,3 @@
-import mongoose from 'mongoose';
-
 const mongoose = require('mongoose');
 
 let PersonnageSchema = new mongoose.Schema({
@@ -9,11 +7,10 @@ let PersonnageSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 
-TaskSchema.methods.toDto = function () {
+PersonnageSchema.methods.toDto = function () {
    return {
        id: this._id,
-       content: this.content,
-       state: this.state
+       role: this.role
    }
 };
 

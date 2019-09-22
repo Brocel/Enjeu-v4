@@ -9,8 +9,8 @@ export class Personnage {
     roles: Array<'JOUEUR'|'MOB'>,
     //description
     name: string,
-    gender: string,
-    race: string,
+    gender: Array<'FEMME'|'HOMME'|'HERMAPHRODITE'>,
+    race: Array<'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'>,
     mood: string,
     job: string,
     avatar: string,
@@ -35,8 +35,8 @@ export class Personnage {
 
 class Description {
   name: string;
-  gender: string;
-  race: string;
+  gender: Array<'FEMME'|'HOMME'|'HERMAPHRODITE'>;
+  race: Array<'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'>;
   mood: string; //role play
   job: string; //classe metier à coder
   title: string; //titre "honorifique"
@@ -75,8 +75,8 @@ class Description {
 
   constructor(
     name: string,
-    gender: string,
-    race: string,
+    gender: Array<'FEMME'|'HOMME'|'HERMAPHRODITE'>,
+    race: Array<'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'>,
     mood: string,
     job: string,
     avatar: string,
@@ -84,8 +84,8 @@ class Description {
   )
   {
     this.name = name;
-    this.gender = gender;
-    this.race = race;
+    this.gender = gender || ['FEMME'];
+    this.race = race || ['HUMAIN'];
     this.mood = mood;
     this.job = job;
     this.avatar = avatar;
