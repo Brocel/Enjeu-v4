@@ -1,29 +1,32 @@
+import { Description } from './description';
+import { Statistics } from './statistics';
+
 export class Personnage {
-  roles: Array<'JOUEUR'|'MOB'>;
+  role: 'JOUEUR'|'MOB';
   description: Description;
   statistics: Statistics;
 
   //getters
+  get role() {
+      return this.role;
+  }
 
   constructor(
-    roles: Array<'JOUEUR'|'MOB'>,
+    role: 'JOUEUR'|'MOB',
     //description
     name: string,
-    gender: Array<'FEMME'|'HOMME'|'HERMAPHRODITE'>,
-    race: Array<'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'>,
+    gender: 'FEMME'|'HOMME'|'HERMAPHRODITE',
     mood: string,
-    job: string,
     avatar: string,
     story: string,
-    //statistics
-    taille: number,
-    mass: number,
-    age: number
-  )
+    race: 'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN',
+    job: 'GUERRIER'|'SAGE'|'ASSASSIN',
+    specialty:'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'
+    )
   {
-    this.roles = roles || ['JOUEUR'];
+    this.role = role || 'JOUEUR';
     this.description = new Description(name, gender, race, mood, job, avatar, story);
-    this.statistics = new Statistics(taille, mass, age);
+    this.statistics = new Statistics();
     //mettre un return description et statistics ?
   }
   // Méthodes
