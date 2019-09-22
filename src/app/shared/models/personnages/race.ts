@@ -35,17 +35,59 @@ export class Race {
   }
 
   constructor(
-    name: Array<'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'>
+    name: 'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'
   )
   {
-    this.name = name || ['HUMAIN'];
+    this.name = name || 'HUMAIN';
     //Construction des propriétés de la race
-    if (this.name==['HUMAIN']) {
-      this.minTaille = 1,4;
+    if (this.name=='HUMAIN') {
+      this.minTaille = 1.4;
       this.maxTaille = 2.1;
       this.minAge = 15;
       this.maxAge = 100;
-      this.mulFor = 
-    }
+      this.mulFor = 1;
+      this.mulDef = 1;
+      this.mulMass = 1;
+    } else if (this.name=='ELFE') {
+      this.minTaille = 1.3;
+      this.maxTaille = 1.8;
+      this.minAge = 40;
+      this.maxAge = 800;
+      this.mulFor = 0.8;
+      this.mulDef = 0.8;
+      this.mulMass = 0.8;
+    } else if (this.name=='NAIN') {
+      this.minTaille = 1.1;
+      this.maxTaille = 1.5;
+      this.minAge = 50;
+      this.maxAge = 500;
+      this.mulFor = 1.1;
+      this.mulDef = 1.4;
+      this.mulMass = 1.5;
+    } else if (this.name=='ORC') {
+      this.minTaille = 1.7;
+      this.maxTaille = 2.5;
+      this.minAge = 12;
+      this.maxAge = 60;
+      this.mulFor = 1.3;
+      this.mulDef = 1.1;
+      this.mulMass = 1.2;
+    } else if (this.name=='GOBELIN') {
+      this.minTaille = 0.7;
+      this.maxTaille = 1.3;
+      this.minAge = 10;
+      this.maxAge = 90;
+      this.mulFor = 0.8;
+      this.mulDef = 0.9;
+      this.mulMass = 1.2;
+    } else {
+      this.minTaille = 1;
+      this.maxTaille = 3;
+      this.minAge = 10;
+      this.maxAge = 400;
+      this.mulFor = 1;
+      this.mulDef = 1;
+      this.mulMass = 1;
+    };
   }
 }
