@@ -1,13 +1,9 @@
 export class Personnage {
   roles: Array<'JOUEUR'|'MOB'>;
-  readonly id: string;
   description: Description;
   statistics: Statistics;
 
   //getters
-  get theId() {
-    return this.id;
-  }
 
   constructor(
     roles: Array<'JOUEUR'|'MOB'>,
