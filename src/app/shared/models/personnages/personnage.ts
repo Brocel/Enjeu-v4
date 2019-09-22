@@ -1,31 +1,7 @@
 export class Personnage {
   roles: Array<'JOUEUR'|'MOB'>;
-  //Description
-  name: string;
-  gender: 'FEMME'|'HOMME'|'HERMAPHRODITE';
-  race: 'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN';
-  mood: string; //humeur, caractère role play
-  job: 'GUERRIER'|'SAGE'|'ASSASSIN'; //classe metier à coder
-  title: string; //titre "honorifique"
-  avatar: string; //url de l'image
-  level: number; // réfléchir au fonctionnement de l'xp
-  story: string; // histoire, description (RP)
-  //Statistics
-  taille: number; // taille de l'individu en metres
-  mass: number; // masse en kg
-  age: number; // age en années
-  for: number; //force physique
-  def: number; // résistance physique
-  int: number; // intelligence
-  //fonction de Race
-  readonly minTaille: number; //taille minimum de l'individu en metres
-  readonly maxTaille: number; //taille max de l'individu en metres
-  readonly minAge: number; //age minimum de l'individu en années
-  readonly maxAge: number; //age max de l'individu en années
-  readonly forRace: number; //modificateur de force
-  readonly defRace: number; //modificateur de défense
-  readonly massRace: number; //modificateur de masse
-
+  description: Description;
+  statistics: Statistics;
 
   //getters
 
@@ -54,7 +30,15 @@ export class Personnage {
 }
 
 class Description {
-
+  name: string;
+  gender: Array<'FEMME'|'HOMME'|'HERMAPHRODITE'>;
+  race: Array<'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'>;
+  mood: string; //role play
+  job: string; //classe metier à coder
+  title: string; //titre "honorifique"
+  avatar: string; //url de l'image
+  level: number; // réfléchir au fonctionnement de l'xp
+  story: string; // histoire, description (RP)
 
   //getters
   get theName() {
