@@ -1,3 +1,5 @@
+import { PersonnageModule } from '../../modules/personnage.module';
+
 export class Personnage {
   roles: Array<'JOUEUR'|'MOB'>;
   description: Description;
