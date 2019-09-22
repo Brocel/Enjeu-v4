@@ -13,7 +13,7 @@ let DescriptionSchema = new mongoose.Schema({
 
 DescriptionSchema.methods.toDto = function () {
    return {
-       id: this._id,
+       descId: this._id,
        name: this.name,
        gender : this.gender,
        mood : this.mood,

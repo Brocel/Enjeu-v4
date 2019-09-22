@@ -12,8 +12,8 @@ let StatisticsSchema = new mongoose.Schema({
 
 StatisticsSchema.methods.toDto = function () {
    return {
-       id: this._id,
-       taile: this.taille,
+       statsId: this._id,
+       taille: this.taille,
        mass : this.mass,
        age: this.age,
        for : this.for,
