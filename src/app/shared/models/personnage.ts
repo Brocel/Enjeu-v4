@@ -24,10 +24,6 @@ export class Personnage {
     this.roles = roles || ['JOUEUR'];
     this.description = new Description(name, gender, race, mood, job, avatar, story);
     this.statistics = new Statistics(taille, mass, age);
-    if (!this.id) {
-      let raceGenderJob: string = this.description.theRace + this.description.theGender + this.description.theJob;
-      this.id = raceGenderJob;
-    }
     //mettre un return description et statistics ?
   }
   // Méthodes
