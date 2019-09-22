@@ -6,10 +6,10 @@ let RaceSchema = new mongoose.Schema({
   maxTaille: { type: Number },
   minAge: { type: Number },
   maxAge: { type: Number },
-  //multiplicateurs statistics
-  mulFor: { type: Number },
-  mulDef: { type: Number },
-  mulMass: { type: Number }
+  //modtiplicateurs statistics
+  modFor: { type: Number },
+  modDef: { type: Number },
+  modMass: { type: Number }
 
 }, { timestamps: true });
 
@@ -22,9 +22,9 @@ RaceSchema.methods.toDto = function () {
        maxTaille : this.maxTaille,
        minAge: this.minAge,
        maxAge : this.maxAge,
-       mulFor: this.mulFor,
-       mulDef : this.mulDef,
-       mulMass: this.mulMass
+       modFor: this.modFor,
+       modDef : this.modDef,
+       modMass: this.modMass
    }
 };
 

@@ -48,7 +48,6 @@ export class Description {
     this.race = new Race(race);
     this.job = new Job(job);
     this.specialty = new Job(specialty);
-
   }
 
 }

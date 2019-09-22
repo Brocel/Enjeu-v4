@@ -4,34 +4,34 @@ export class Race {
   readonly maxTaille: number; //taille max de l'individu en metres
   readonly minAge: number; //age minimum de l'individu en années
   readonly maxAge: number; //age max de l'individu en années
-  readonly mulFor: number; //multiplicateur de force
-  readonly mulDef: number; //multiplicateur de défense
-  readonly mulMass: number; //multiplicateur de masse
+  readonly modFor: number; //modif de force
+  readonly modDef: number; //modif de défense
+  readonly modMass: number; //modif de masse
 
   //getters
-  get theName() {
+  get name() {
     return this.name;
   }
-  get theMinTaille() {
+  get minTaille() {
     return this.minTaille;
   }
-  get theMaxTaille() {
+  get maxTaille() {
     return this.maxTaille;
   }
-  get theMinAge() {
+  get minAge() {
     return this.minAge;
   }
-  get theMaxAge() {
+  get maxAge() {
     return this.maxAge;
   }
-  get theMulFor() {
-    return this.mulFor;
+  get modFor() {
+    return this.modFor;
   }
-  get theMulDef() {
-    return this.mulDef;
+  get modDef() {
+    return this.modDef;
   }
-  get theMulMass() {
-    return this.mulMass;
+  get modMass() {
+    return this.modMass;
   }
 
   constructor(
@@ -45,49 +45,49 @@ export class Race {
       this.maxTaille = 2.1;
       this.minAge = 15;
       this.maxAge = 100;
-      this.mulFor = 1;
-      this.mulDef = 1;
-      this.mulMass = 1;
+      this.modFor = 1;
+      this.modDef = 1;
+      this.modMass = 1;
     } else if (this.name=='ELFE') {
       this.minTaille = 1.3;
       this.maxTaille = 1.8;
       this.minAge = 40;
       this.maxAge = 800;
-      this.mulFor = 0.8;
-      this.mulDef = 0.8;
-      this.mulMass = 0.8;
+      this.modFor = 0.8;
+      this.modDef = 0.8;
+      this.modMass = 0.8;
     } else if (this.name=='NAIN') {
       this.minTaille = 1.1;
       this.maxTaille = 1.5;
       this.minAge = 50;
       this.maxAge = 500;
-      this.mulFor = 1.1;
-      this.mulDef = 1.4;
-      this.mulMass = 1.5;
+      this.modFor = 1.1;
+      this.modDef = 1.4;
+      this.modMass = 1.5;
     } else if (this.name=='ORC') {
       this.minTaille = 1.7;
       this.maxTaille = 2.5;
       this.minAge = 12;
       this.maxAge = 60;
-      this.mulFor = 1.3;
-      this.mulDef = 1.1;
-      this.mulMass = 1.2;
+      this.modFor = 1.3;
+      this.modDef = 1.1;
+      this.modMass = 1.2;
     } else if (this.name=='GOBELIN') {
       this.minTaille = 0.7;
       this.maxTaille = 1.3;
       this.minAge = 10;
       this.maxAge = 90;
-      this.mulFor = 0.8;
-      this.mulDef = 0.9;
-      this.mulMass = 1.2;
+      this.modFor = 0.8;
+      this.modDef = 0.9;
+      this.modMass = 1.2;
     } else {
       this.minTaille = 1;
       this.maxTaille = 3;
       this.minAge = 10;
       this.maxAge = 400;
-      this.mulFor = 1;
-      this.mulDef = 1;
-      this.mulMass = 1;
+      this.modFor = 1;
+      this.modDef = 1;
+      this.modMass = 1;
     };
   }
 }
