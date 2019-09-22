@@ -1,5 +1,3 @@
-
-
 export class Statistics {
   taille: number; // taille de l'individu en metres
   mass: number; // masse en kg
