@@ -1,13 +1,4 @@
-import { Race } from './race';
 
-let race = new Race;
-let minTaille: number = race.theMinTaille();
-let maxTaille: number = race.theMaxTaille();
-let minAge: number = race.theMinAge();
-let maxAge: number = race.theMaxAge();
-let mulForRace: number = race.theMulFor();
-let mulDefRace: number = race.theMulDef();
-let mulMass: number = race.theMulMass();
 
 export class Statistics {
   taille: number; // taille de l'individu en metres
