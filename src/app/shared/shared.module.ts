@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from  '@angular/forms';
 import { NgxBootstrapModule } from './modules/ngx-bootstrap.module';
+import { PersonnageModule } from './modules/personnage.module';
 
 
 
@@ -11,7 +12,8 @@ import { NgxBootstrapModule } from './modules/ngx-bootstrap.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxBootstrapModule
+    NgxBootstrapModule,
+    PersonnageModule
   ],
   exports: [
     CommonModule, //préparation de la factorisation du CommonModule
