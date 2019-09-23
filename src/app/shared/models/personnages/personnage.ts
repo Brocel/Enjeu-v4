@@ -26,7 +26,7 @@ export class Personnage {
   {
     this.role = role || 'JOUEUR';
     this.description = new Description(name, gender, mood, avatar, story, race, job, specialty);
-    this.statistics = new Statistics();
+    this.statistics = new Statistics(race, job, specialty);
     //mettre un return description et statistics ?
   }
   // Méthodes
