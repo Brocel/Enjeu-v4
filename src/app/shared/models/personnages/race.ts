@@ -1,5 +1,5 @@
 export class Race {
-  name: String; //nom de la race
+  name: 'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'; //nom de la race
   readonly minTaille: number; //taille minimum de l'individu en metres
   readonly maxTaille: number; //taille max de l'individu en metres
   readonly minAge: number; //age minimum de l'individu en années
