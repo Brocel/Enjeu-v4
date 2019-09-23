@@ -6,9 +6,9 @@ export class Statistics {
   readonly taille: number; // taille de l'individu en metres
   readonly mass: number; // masse en kg
   readonly age: number; // age en années
-  readonly for: number; //force physique
-  readonly def: number; // résistance physique
-  readonly int: number; // intelligence
+  readonly force: number; //force physique
+  readonly defense: number; // résistance physique
+  readonly intel: number; // intelligence
   race: Race;
   job: Job;
   specialty: Specialty;
@@ -27,13 +27,13 @@ export class Statistics {
     return this.age;
   }
   get theFor() {
-    return this.for;
+    return this.force;
   }
   get theDef() {
-    return this.def;
+    return this.defense;
   }
   get theInt() {
-    return this.int;
+    return this.intel;
   }
 
   constructor(
@@ -52,9 +52,9 @@ export class Statistics {
     //age en fonction de Race
     this.age = Math.random() * (this.race.theMaxAge - this.race.theMinAge) + this.race.theMinAge;
     // Force, def, int en fction de race, job et specialty
-    this.for = this.defaultFor * this.race.theRaceModFor * this.job.theJobModFor * this.specialty.theSpecModFor;
-    this.def = this.defaultDef * this.race.theRaceModDef * this.job.theJobModDef * this.specialty.theSpecModDef;
-    this.int = this.defaultInt * this.job.theJobModInt * this.specialty.theSpecModInt;
+    this.force = this.defaultFor * this.race.theRaceModFor * this.job.theJobModFor * this.specialty.theSpecModFor;
+    this.defense = this.defaultDef * this.race.theRaceModDef * this.job.theJobModDef * this.specialty.theSpecModDef;
+    this.intel = this.defaultInt * this.job.theJobModInt * this.specialty.theSpecModInt;
   }
 
   //méthodes
