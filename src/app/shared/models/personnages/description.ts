@@ -37,7 +37,7 @@ export class Description {
     story: string,
     race: 'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN',
     job: 'GUERRIER'|'SAGE'|'ASSASSIN',
-    specialty:'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'
+    specialty: 'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'
   )
   {
     this.name = name || 'PINIOUF';

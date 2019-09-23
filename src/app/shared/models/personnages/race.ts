@@ -35,7 +35,7 @@ export class Race {
   }
 
   constructor(
-    name: 'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'
+    race: 'HUMAIN'|'ELFE'|'NAIN'|'ORC'|'GOBELIN'
   )
   {
     this.raceName = name || 'HUMAIN';

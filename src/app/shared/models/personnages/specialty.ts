@@ -23,7 +23,7 @@ export class Specialty {
   }
 
   constructor(
-    name: 'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'
+    specialty: 'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'
   )
   {
     this.specName = name || 'COMBAT';

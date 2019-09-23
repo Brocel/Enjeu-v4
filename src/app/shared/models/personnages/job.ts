@@ -19,7 +19,7 @@ export class Job {
   }
 
   constructor(
-    name: 'GUERRIER'|'SAGE'|'ASSASSIN'
+    job: 'GUERRIER'|'SAGE'|'ASSASSIN'
   )
   {
     this.jobName = name || 'GUERRIER';
