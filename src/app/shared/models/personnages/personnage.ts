@@ -7,7 +7,7 @@ export class Personnage {
   statistics: Statistics;
 
   //getters
-  get role() {
+  get theRole() {
       return this.role;
   }
 
@@ -25,7 +25,7 @@ export class Personnage {
     )
   {
     this.role = role || 'JOUEUR';
-    this.description = new Description(name, gender, race, mood, job, avatar, story);
+    this.description = new Description(name, gender, mood, avatar, story, race, job, specialty);
     this.statistics = new Statistics();
     //mettre un return description et statistics ?
   }

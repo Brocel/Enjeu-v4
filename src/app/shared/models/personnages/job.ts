@@ -1,40 +1,40 @@
 export class Job {
-  name: 'GUERRIER'|'SAGE'|'ASSASSIN';
-  readonly modFor: number; //modif de force
-  readonly modDef: number; //modif de défense
-  readonly modInt: number; //modif de intelligence
+  jobName: 'GUERRIER'|'SAGE'|'ASSASSIN';
+  readonly jobModFor: number; //jobModif de force
+  readonly jobModDef: number; //jobModif de défense
+  readonly jobModInt: number; //jobModif de intelligence
 
   // getters
-  get name() {
-    return this.name;
+  get theJobName() {
+    return this.jobName;
   }
-  get modFor() {
-    return this.modFor;
+  get theJobModFor() {
+    return this.jobModFor;
   }
-  get modDef() {
-    return this.modDef;
+  get theJobModDef() {
+    return this.jobModDef;
   }
-  get modInt() {
-    return this.modInt;
+  get theJobModInt() {
+    return this.jobModInt;
   }
 
   constructor(
     name: 'GUERRIER'|'SAGE'|'ASSASSIN'
   )
   {
-    this.name = name || 'GUERRIER';
-    if (this.name=='GUERRIER') {
-      this.modFor = 1.2;
-      this.modDef = 1.2;
-      this.modInt = 0.6;
-    } else if (this.name=='SAGE') {
-      this.modFor = 0.8;
-      this.modDef = 0.8;
-      this.modInt = 1.4;
-    } else if (this.name=='ASSASSIN') {
-      this.modFor = 1.2;
-      this.modDef = 0.6;
-      this.modInt = 1.2;
+    this.jobName = name || 'GUERRIER';
+    if (this.jobName=='GUERRIER') {
+      this.jobModFor = 1.2;
+      this.jobModDef = 1.2;
+      this.jobModInt = 0.6;
+    } else if (this.jobName=='SAGE') {
+      this.jobModFor = 0.8;
+      this.jobModDef = 0.8;
+      this.jobModInt = 1.4;
+    } else if (this.jobName=='ASSASSIN') {
+      this.jobModFor = 1.2;
+      this.jobModDef = 0.6;
+      this.jobModInt = 1.2;
     }
   }
 

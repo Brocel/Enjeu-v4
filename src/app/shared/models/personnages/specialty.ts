@@ -1,24 +1,24 @@
 export class Specialty {
-  name: 'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON';
-  readonly modFor: number; //modif de force
-  readonly modDef: number; //modif de défense
-  readonly modInt: number; //modif de intelligence
+  specName: 'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON';
+  readonly specModFor: number; //specModif de force
+  readonly specModDef: number; //specModif de défense
+  readonly specModInt: number; //specModif de intelligence
   readonly ability : string; //compétence particulière
 
   // getters
-  get name() {
-    return this.name;
+  get theSpecName() {
+    return this.specName;
   }
-  get modFor() {
-    return this.modFor;
+  get theSpecModFor() {
+    return this.specModFor;
   }
-  get modDef() {
-    return this.modDef;
+  get theSpecModDef() {
+    return this.specModDef;
   }
-  get modInt() {
-    return this.modInt;
+  get theSpecModInt() {
+    return this.specModInt;
   }
-  get ability() {
+  get theAbility() {
     return this.ability;
   }
 
@@ -26,36 +26,36 @@ export class Specialty {
     name: 'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'
   )
   {
-    this.name = name || 'COMBAT';
-    if (this.name=='COMBAT') {
-      this.modFor = 1.5;
-      this.modDef = 1.5;
-      this.modInt = 1;
+    this.specName = name || 'COMBAT';
+    if (this.specName=='COMBAT') {
+      this.specModFor = 1.5;
+      this.specModDef = 1.5;
+      this.specModInt = 1;
       this.ability = 'Je me bats très bien au corps à corps';
-    } else if (this.name=='ARC') {
-      this.modFor = 1.6;
-      this.modDef = 1;
-      this.modInt = 1.4;
+    } else if (this.specName=='ARC') {
+      this.specModFor = 1.6;
+      this.specModDef = 1;
+      this.specModInt = 1.4;
       this.ability = 'Je suis plus efficace à distance';
-    } else if (this.name=='SPITITUALITE') {
-      this.modFor = 1;
-      this.modDef = 1.2;
-      this.modInt = 1.8;
+    } else if (this.specName=='SPITITUALITE') {
+      this.specModFor = 1;
+      this.specModDef = 1.2;
+      this.specModInt = 1.8;
       this.ability = 'Je motive les troupes';
-    } else if (this.name=='ALCHIMIE') {
-      this.modFor = 1;
-      this.modDef = 1.4;
-      this.modInt = 1.6;
+    } else if (this.specName=='ALCHIMIE') {
+      this.specModFor = 1;
+      this.specModDef = 1.4;
+      this.specModInt = 1.6;
       this.ability = 'Je fabrique des potions alchimiques';
-    } else if (this.name=='VOL') {
-      this.modFor = 1.2;
-      this.modDef = 1.2;
-      this.modInt = 1.6;
+    } else if (this.specName=='VOL') {
+      this.specModFor = 1.2;
+      this.specModDef = 1.2;
+      this.specModInt = 1.6;
       this.ability = 'Je suis très discret';
-    } else if (this.name=='POISON') {
-      this.modFor = 1;
-      this.modDef = 1.6;
-      this.modInt = 1.4;
+    } else if (this.specName=='POISON') {
+      this.specModFor = 1;
+      this.specModDef = 1.6;
+      this.specModInt = 1.4;
       this.ability = 'Je confectionne des poisons';
     }
   }

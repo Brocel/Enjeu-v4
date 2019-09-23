@@ -13,19 +13,19 @@ export class Description {
   specialty: Specialty;
 
   //getters
-  get name() {
+  get theName() {
     return this.name;
   }
-  get gender() {
+  get theGgender() {
     return this.gender;
   }
-  get mood() {
+  get theMood() {
     return this.mood;
   }
-  get avatar() {
+  get theAvatar() {
     return this.avatar;
   }
-  get story() {
+  get theStory() {
     return this.story;
   }
 
@@ -47,7 +47,7 @@ export class Description {
     this.story = story || 'Rédiger une histoire';
     this.race = new Race(race);
     this.job = new Job(job);
-    this.specialty = new Job(specialty);
+    this.specialty = new Specialty(specialty);
   }
 
 }
