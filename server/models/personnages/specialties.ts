@@ -1,23 +1,23 @@
 const mongoose = require('mongoose');
 
 let SpecialtySchema = new mongoose.Schema({
-  speName: { type: Array<'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'>},
+  specName: { type: 'COMBAT'|'ARC'|'SPITITUALITE'|'ALCHIMIE'|'VOL'|'POISON'},
   ability: { type: String },
   //modtiplicateurs statistics
-  modFor: { type: Number },
-  modDef: { type: Number },
-  modInt: { type: Number }
+  specModFor: { type: Number },
+  specModDef: { type: Number },
+  specModInt: { type: Number }
 }, { timestamps: true });
 
 
 SpecialtySchema.methods.toDto = function () {
    return {
-       speId: this._id,
+       specId: this._id,
        ability: this.ability,
-       speName: this.speName,
-       modFor: this.modFor,
-       modDef : this.modDef,
-       modInt: this.modInt
+       specName: this.specName,
+       specModFor: this.specModFor,
+       specModDef : this.specModDef,
+       specModInt: this.specModInt
    }
 };
 

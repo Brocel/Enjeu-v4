@@ -4,9 +4,9 @@ let StatisticsSchema = new mongoose.Schema({
    taille: { type: Number},
    mass: { type: Number},
    age: { type: Number},
-   for: { type: Number},
-   def: { type: Number},
-   int: { type: Number}
+   force: { type: Number},
+   defense: { type: Number},
+   intel: { type: Number}
 }, { timestamps: true });
 
 
@@ -16,9 +16,9 @@ StatisticsSchema.methods.toDto = function () {
        taille: this.taille,
        mass : this.mass,
        age: this.age,
-       for : this.for,
-       def: this.def,
-       int : this.int
+       force : this.force,
+       defense: this.defense,
+       intel : this.intel
    }
 };
 

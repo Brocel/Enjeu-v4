@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 let PersonnageSchema = new mongoose.Schema({
-   role: { type: Array<'JOUEUR'|'MOB'>},
+   role: { type: 'JOUEUR'|'MOB'},
    description: { type: mongoose.Schema.Types.ObjectId, ref: 'Description' },
    statistics: { type: mongoose.Schema.Types.ObjectId, ref: 'Statistics' }
 }, { timestamps: true });

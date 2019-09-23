@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 let DescriptionSchema = new mongoose.Schema({
    name: { type: String, maxlength: 20},
-   gender: { type: Array<'FEMME'|'HOMME'|'HERMAPHRODITE'>, default: ['FEMME']},
+   gender: { type: 'FEMME'|'HOMME'|'HERMAPHRODITE', default: 'FEMME'},
    race: { type: mongoose.Schema.Types.ObjectId, ref: 'Race' },
    mood: { type: String, maxlength: 20},
    job: { type: mongoose.Schema.Types.ObjectId, ref: 'Job' },
