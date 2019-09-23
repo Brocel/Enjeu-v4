@@ -90,4 +90,7 @@ export class Race {
       this.raceModMass = 1;
     };
   }
+
+  //méthodes
+  
 }
