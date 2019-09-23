@@ -16,7 +16,7 @@ export class Description {
   get theName() {
     return this.name;
   }
-  get theGgender() {
+  get theGender() {
     return this.gender;
   }
   get theMood() {

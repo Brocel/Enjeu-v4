@@ -30,4 +30,17 @@ export class Personnage {
     //mettre un return description et statistics ?
   }
   // Méthodes
+  function describeSelf() {
+    let role: string = this.theRole;
+    let name: string = this.description.theName;
+    let gender: string = this.description.theGender;
+    let mood: string = this.description.theMood;
+    let story: string = this.description.theStory;
+    let race: string = this.description.race.theRaceName;
+    let job: string = this.description.job.theJobName;
+    let specialty: string = this.description.specialty.theSpecName;
+    let ability: string = this.description.specialty.theAbility;
+
+    return console.log('Je suis un '+role+' '+gender+' '+race+' assez '+mood+' répondant au nom de '+name+'. Je suis un '+job+' spécialisé dans :'+specialty+'. Compétence particulière : "'+ability+'".');
+  }
 }
