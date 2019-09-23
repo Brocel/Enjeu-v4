@@ -9,6 +9,14 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/Enjeu-v4');
 mongoose.set('debug', true);
 
+//Require the models
+require('./server/models/personnages/Personnage');
+require('./server/models/personnages/Description');
+require('./server/models/personnages/Statistics');
+require('./server/models/personnages/Race');
+require('./server/models/personnages/Job');
+require('./server/models/personnages/Specialty');
+
 //Init express
 const app = express();
 
