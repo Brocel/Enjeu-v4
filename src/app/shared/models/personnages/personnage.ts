@@ -30,17 +30,33 @@ export class Personnage {
     //mettre un return description et statistics ?
   }
   // Méthodes
-  function describeSelf() {
-    let role: string = this.theRole;
-    let name: string = this.description.theName;
-    let gender: string = this.description.theGender;
-    let mood: string = this.description.theMood;
-    let story: string = this.description.theStory;
-    let race: string = this.description.race.theRaceName;
-    let job: string = this.description.job.theJobName;
-    let specialty: string = this.description.specialty.theSpecName;
-    let ability: string = this.description.specialty.theAbility;
+  describeSelf() {
+    let role = this.theRole;
+    let name = this.description.theName;
+    let gender = this.description.theGender;
+    let mood = this.description.theMood;
+    let story = this.description.theStory;
+    let race = this.description.race.theRaceName;
+    let job = this.description.job.theJobName;
+    let specialty = this.description.specialty.theSpecName;
+    let ability = this.description.specialty.theAbility;
 
-    return console.log('Je suis un '+role+' '+gender+' '+race+' assez '+mood+' répondant au nom de '+name+'. Je suis un '+job+' spécialisé dans :'+specialty+'. Compétence particulière : "'+ability+'".');
+    return console.log('Je suis un '+role+' '+gender+' '+race+' assez '+mood+' répondant au nom de '+name+'. Je suis un '+job+' spécialisé dans : '+specialty+'. Compétence particulière : '+ability+'. Voici mon histoire : '+story);
+  }
+
+  showPhysicalStats() {
+    let taille = this.statistics.theTaille;
+    let mass = this.statistics.theMass;
+    let age = this.statistics.theAge;
+
+    return console.log('Je mesure : '+taille+' mètres (m), ma masse vaut : '+mass+' kilogrammes (kg) et je suis âgé de : '+age+' années (1 an = 365.25 jours).');
+  }
+
+  showInGameStats() {
+    let force = this.statistics.theFor;
+    let defense = this.statistics.theDef;
+    let intel = this.statistics.theInt;
+
+    return console.log('Je possède une force physique de : '+force+' UF (Unité de Force) , une résistance physique de : '+defense+' UD (Unité de Défense) et une intelligence de : '+intel+' UFM (Unité de Force Mentale).');
   }
 }
