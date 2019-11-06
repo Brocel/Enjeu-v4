@@ -23,7 +23,7 @@
     "bootswatch": "^4.3.1",
     "express": "^4.17.1",
     "firebase": "^6.6.2",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "ngx-bootstrap": "^5.1.2",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.3",
